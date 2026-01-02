@@ -83,6 +83,12 @@ public:
 		return temp;
 	}
 
+	SafeFloat& operator-()
+	{
+		this->Data = -this->Data;
+		return *this;
+	}
+
 	SafeFloat& operator*(const SafeFloat& other)
 	{
 		const T a = Data;
