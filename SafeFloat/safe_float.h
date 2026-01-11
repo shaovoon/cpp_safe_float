@@ -111,6 +111,36 @@ public:
 		return temp;
 	}
 
+	SafeFloat& operator==(const SafeFloat& other)
+	{
+		return this->Data == other.Data;
+	}
+
+	SafeFloat& operator!=(const SafeFloat& other)
+	{
+		return this->Data != other.Data;
+	}
+
+	SafeFloat& operator<=(const SafeFloat& other)
+	{
+		return this->Data <= other.Data;
+	}
+
+	SafeFloat& operator<(const SafeFloat& other)
+	{
+		return this->Data < other.Data;
+	}
+
+	SafeFloat& operator>=(const SafeFloat& other)
+	{
+		return this->Data >= other.Data;
+	}
+
+	SafeFloat& operator>(const SafeFloat& other)
+	{
+		return this->Data > other.Data;
+	}
+
 	static void CheckExceptionThrown()
 	{
 		int res = std::fetestexcept(ExceptionToCheck);
